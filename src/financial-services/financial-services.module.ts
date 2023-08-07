@@ -4,9 +4,10 @@ import { Module } from "@nestjs/common";
 
 import { FinancialServicesController } from "./financial-services.controller";
 import { FinancialServicesService } from "./financial-services.service";
+import { MutualFundsModule } from "src/mutual-funds/mutual-funds.module";
 
 @Module({
-    imports: [CreditPersonalModule, CreditInvoiceModule],
+    imports: [CreditPersonalModule, CreditInvoiceModule, MutualFundsModule],
     controllers: [FinancialServicesController],
     providers: [FinancialServicesService],
 })
